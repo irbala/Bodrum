@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip to Turkey</title>
+    <style>
+        body {
+            background-color: #060505;
+            color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #d1a6a9;
+            color: #060505;
+            padding-top: 1px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            margin: 0;
+        }
+        header nav {
+            background: #70292e;
+            margin-top: 0.5em;
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        header nav ul li {
+            flex: 1;
+            min-width: 100px; /* Ensures buttons don't get too small on small screens */
+        }
+        header nav ul li a {
+            color: #f2f2f2;
+            display: block;
+            padding: 0.5em;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        header nav ul li a:hover {
+            background: #cf3641;
+        }
+        section {
+            padding: 2em;
+            margin-top: 2em;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #d1a6a9;
+        }
+        .section-content {
+            margin-top: 1em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        img {
+            margin: 10px;
+            height: 150px;
+            border: 5px solid #cf3641;
+            width: auto;
+            max-width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            section {
+                padding: 1em;
+            }
+            .container {
+                width: 90%;
+            }
+            .section-content {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bodrum</h1>
+    <nav>
+        <ul>
+            <li><a href="#food">مطاعم</a></li>
+            <li><a href="#shopping">تسوق</a></li>
+            <li><a href="#entertainment">ترفيه</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="food">
+    <div class="container">
+        <h2>مطاعم</h2>
+        <div class="section-content">
+            <a href="https://www.instagram.com/zumabodrum"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTFaDBVeSJl8Cj4kusBQYtDpE9uyLbmbIrJg&s" alt="Zuma Bodrum"></a>
+            <a href="https://www.instagram.com/inariomakase/?hl=en"><img src="https://www.bodrummekanrehberi.com/images/inariomakasebodrum-6.jpg" alt="Inari Omakase"></a>
+            <a href="https://www.instagram.com/papermoon.tr/"><img src="https://static.wixstatic.com/media/51f67b_4a7f3e40d95440feb1c3e3c6cf5cf28e~mv2.jpg/v1/fill/w_158,h_210,fp_0.50_0.50,q_90/51f67b_4a7f3e40d95440feb1c3e3c6cf5cf28e~mv2.jpg" alt="Papermoon"></a>
+            <a href="https://www.instagram.com/hakkasanbodrum"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6B8pz1Nl0doJAlKI3cJilGw52sBoX28tmag&s" alt="Hakkasan Bodrum"></a>
+            <a href="https://www.instagram.com/novikovbodrum/"><img src="https://www.novikovgroup.ru/upload/iblock/6ae/vf67w4dxvhgqbcfc9qcxp4eoejpqlt8x.jpg" alt="Novikov Bodrum"></a>
+        </div>
+    </div>
+</section>
+
+<section id="shopping">
+    <div class="container">
+        <h2>تسوق</h2>
+        <div class="section-content">
+            <a href="https://www.instagram.com/aphroditebodrum/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbD9fqJ2sUiFd-MqVgVXn2QM5y6gE9D_LYg&s" alt="Aphrodite Bodrum"></a>
+            <a href="https://www.instagram.com/moribodrum/"><img src="https://cdn3.kobisi.com/image/28820/5254051/1/768/1366/noema-leather-bag-soft-gold.jpg?v=1715002885" alt="Mori Bodrum"></a>     
+            <a href="https://www.instagram.com/mysabella/?hl=en"><img src="https://mysabella.com/cdn/shop/files/40-57-1.jpg?v=1687696051&width=3000" alt="Mysabella"></a>
+            <a href="https://www.instagram.com/goztakibodrum/?hl=en"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDYzAQYpgC00R8v-UGRHcwieGstAHHl4cUpw&s" alt="Goztaki Bodrum"></a>
+            <a href="https://www.instagram.com/miselaistanbul/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAbFBMVEX///8AAAAhHR77+/vo6OgdGRrBwMCqqanw8PAIAADX19f09PR7enqCgYHc29u4t7dqaWni4uKNjI3KysoYExRiYWHR0dFwb2+ZmZlXVVYoJSY/PT1dW1xGRESIh4c3NTYOCg0uLC1PTU0LCALTSxrVAAAC20lEQVRoge1X25KjIBDtBhRvEUU0aMZLnP//x21IZnamaqe2KrAvW5wH00DqSJ2+CpCQkJCQkJCQ8BOEklJV/4a6Q4/bEJ97Kg/GsowxgzY2d48ZK/G+l/SLMjL5bDK0gvNCLUeGRVTuAc1dPO2uLLeo5LrEHkB2o6ZXrCaLSj6jhtagMSUJXiHWMclP7DkzzAEHuMUVfUSwyLL30jBzQocxuUEixYth2p7IsO5uUckFitXcnRjXA4tdRSWHi23QUxbIqiUuN/BV4eQt1GMbmRz49uZrSrvo6NyEocupxnQqaoz/RsEhblUhiFzm36QQQ6ymMdxQ53Z+yz822mbdpGRHhMK74Vorg1vfPxXhrVCIFzo4Q9Xf8A4Kj8bZ9ecjR7xCg4GJOiBOnGXoFRYuWh4dlIrABIzuH4L52GHyTIRipsKeP8lLDVsZVB0FHldShZnRrew5wXg6SyIjpUj6EKfmTu0KqYh3U6VRq0LjOFS2pB3rTkN0kUh35rsfKLDEXLb2LMlyPaOl0yDynLStyavETl61UtVn+1xQjx5NELnwjoPhTpMWJQ0FDU7V7hZUxJyjgxJpNgxdfAwqr2E8qK6XBUxuAWKh8Sio1AzOmZo7s19dtxBoHm1IUb8OjHPKUEZjXLdtq0tKR4q4NFuzkPTHjYeRU5LTRGHe3w/sHhsUI4SMfHoLr7/D6ifn9bMq9qPfuMcZR6meq/77hlJVqCQJfwKvv/6Q8XEw6acR0IoK339AUdasAnKtOyh2aSdon1EJ3esjTH/4GHExNwqgkk5L39n66+MP4tK8TJ7nrkdYRSJcBey+G61fyS3ML+eRrK8DCNk3nrwY30iExerig1yM8qr/wvEjLBcnbFzMntyNieLbzTX5c3/Vp3SrjRpyvZPneiB68uUXcuEGU/nqFy81m9r14+XhUCvpbQt9/sN0V/S8OL1rE6cM1F4BzvnnMyEhISEhISHhf8Evtkgjqcq9+9wAAAAASUVORK5CYII=" alt="Misela Istanbul"></a>  
+            <a href="https://www.instagram.com/yargici_tr/?hl=tr"><img src="https://lh5.googleusercontent.com/p/AF1QipO-sVjc7UjbItC3-bc3YPoiIRaBpyyuKHHLKV81" alt="Yargici"></a>
+        </div>
+    </div>
+</section>
+
+<section id="entertainment">
+    <div class="container">
+        <h2>ترفيه</h2>
+        <div class="section-content">
+            <a href="https://www.instagram.com/mo_bodrum/"><img src="https://photos.mandarinoriental.com/is/image/MandarinOriental/bodrum-blue-beach-family-and-kids-2?hei=1000&fmt=jpeg&op_usm=1,1,5,0&resMode=sharp2&fit=crop&qlt=75,0" alt="Mandarin Oriental Bodrum"></a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
