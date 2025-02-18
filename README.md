@@ -1,6 +1,6 @@
 Bodrum - Travel Planner Web App
 
-Click here to visit the web app: https://irbala.github.io/Bodrum-Travel-Planner
+Click here to visit the web app: https://irbala.github.io/Bodrum
 
 Description:
 
