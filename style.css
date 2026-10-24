@@ -1,127 +1,293 @@
+/* Palette: deep night background, dusty rose and wine accents */
+:root {
+    --bg: #120d0e;
+    --surface: #1c1517;
+    --surface-hover: #241b1d;
+    --text: #f4ece9;
+    --muted: #b9a7a5;
+    --rose: #d1a6a9;
+    --wine: #70292e;
+    --red: #cf3641;
+    --radius: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #060505;
-    color: #f2f2f2;
-    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Tajawal', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
+/* Header */
 header {
-    background: #d1a6a9;
-    color: #060505;
-    margin: 0;
-    padding-top: 1px;
+    background: rgba(18, 13, 14, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(209, 166, 169, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    padding: 0.6em 1.5em;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-header nav {
-    background: #70292e;
-    margin-top: 0.5em;
+.title {
+    color: var(--rose);
+    text-decoration: none;
+}
+
+.title h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0;
 }
 
 header nav ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 0.4em;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-header nav ul li {
-    flex: 1;
-    min-width: 100px;
-}
-
 header nav ul li a {
-    color: #f2f2f2;
+    border-radius: 999px;
+    color: var(--text);
     display: block;
-    padding: 0.5em;
-    text-align: center;
+    font-weight: 500;
+    padding: 0.4em 1.1em;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 header nav ul li a:hover,
 header nav ul li a:focus-visible {
-    background: #cf3641;
+    background: var(--wine);
+    color: #fff;
 }
 
-.title {
-    color: #060505;
+/* Hero */
+.hero {
+    align-items: center;
+    background:
+        linear-gradient(rgba(18, 13, 14, 0.35), rgba(18, 13, 14, 0.95)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Old_windmills_in_Bodrum.jpg?width=1600") center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    min-height: 70vh;
+    padding: 4em 1.5em;
+}
+
+.hero-kicker {
+    color: var(--rose);
+    font-size: 1.05em;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+.hero-title {
+    color: #fff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(3.5rem, 12vw, 7rem);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 0.1em 0;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-sub {
+    color: var(--text);
+    font-size: 1.2em;
+    margin: 0 auto 1.6em;
+    max-width: 32em;
+}
+
+.hero-button {
+    background: var(--rose);
+    border-radius: 999px;
+    color: var(--bg);
+    display: inline-block;
+    font-weight: 700;
+    padding: 0.7em 2em;
     text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
 }
 
+.hero-button:hover,
+.hero-button:focus-visible {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+/* Sections */
 section {
-    margin-top: 2em;
-    padding: 2em;
+    padding: 4em 1.5em 2em;
+    scroll-margin-top: 4em;
 }
 
 .container {
     margin: 0 auto;
+    max-width: 1200px;
     width: 100%;
 }
 
 h2 {
-    color: #d1a6a9;
+    color: var(--rose);
+    font-size: 2.2em;
+    margin: 0;
+}
+
+/* Short decorative line under each section title */
+.container > h2::after {
+    background: var(--red);
+    border-radius: 2px;
+    content: "";
+    display: block;
+    height: 3px;
+    margin: 0.35em auto 0;
+    width: 48px;
+}
+
+.section-note {
+    color: var(--muted);
+    margin: 0.6em 0 0;
 }
 
 .section-content {
     display: flex;
     flex-wrap: wrap;
+    gap: 1.4em;
     justify-content: center;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 /* Each place is a card: photo with its name underneath */
 .place {
-    color: #f2f2f2;
+    background: var(--surface);
+    border: 1px solid rgba(209, 166, 169, 0.12);
+    border-radius: var(--radius);
+    color: var(--text);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 10px;
+    overflow: hidden;
     text-decoration: none;
-    width: 210px;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    width: 220px;
 }
 
-.place:hover .place-name,
-.place:focus-visible .place-name {
-    color: #d1a6a9;
+.place img {
+    aspect-ratio: 4 / 3;
+    background: var(--wine);
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s;
+    width: 100%;
 }
 
-img {
-    border: 5px solid #cf3641;
-    height: auto;
-    max-width: 100%;
-    width: 200px;
+.place:hover,
+.place:focus-visible {
+    background: var(--surface-hover);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    transform: translateY(-4px);
+}
+
+.place:hover img,
+.place:focus-visible img {
+    transform: scale(1.05);
 }
 
 .place-name {
+    color: var(--text);
     display: block;
-    margin-top: 0.4em;
+    font-weight: 500;
+    padding: 0.8em 1em 0.9em;
     text-transform: capitalize;
     transition: color 0.3s;
 }
 
+.place:hover .place-name,
+.place:focus-visible .place-name {
+    color: var(--rose);
+}
+
+/* Footer */
+.site-footer {
+    border-top: 1px solid rgba(209, 166, 169, 0.15);
+    color: var(--muted);
+    margin-top: 3em;
+    padding: 2em 1em;
+}
+
+.site-footer p {
+    font-family: 'Playfair Display', Georgia, serif;
+    margin: 0;
+}
+
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 1.5em;
+    header {
+        flex-direction: column;
+        gap: 0.3em;
+        padding: 0.6em 1em;
+    }
+
+    .title h1 {
+        font-size: 1.4em;
+    }
+
+    header nav ul li a {
+        padding: 0.35em 0.9em;
+    }
+
+    .hero {
+        min-height: 60vh;
     }
 
     section {
-        padding: 1em;
-    }
-
-    .container {
-        width: 90%;
+        padding: 3em 1em 1.5em;
+        scroll-margin-top: 7em;
     }
 
     .section-content {
-        align-items: center;
-        flex-direction: column;
+        gap: 0.8em;
+    }
+
+    /* Two cards per row on phones */
+    .place {
+        width: calc(50% - 0.4em);
+    }
+
+    .place-name {
+        font-size: 0.95em;
+        padding: 0.6em 0.6em 0.7em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .place,
+    .place img,
+    .hero-button {
+        transition: none;
     }
 }
